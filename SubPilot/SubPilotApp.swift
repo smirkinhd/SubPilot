@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SubPilotApp: App {
+    @StateObject private var store = SubscriptionStore()
+
     var body: some Scene {
-        DocumentGroup(newDocument: SubPilotDocument()) { file in
-            ContentView(document: file.$document)
+        WindowGroup {
+            ContentView()
+                .environmentObject(store)
         }
     }
 }

@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC32883B30A4FF0B00B26D42 /* SubscriptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32883A30A4FF0B00B26D42 /* SubscriptionStore.swift */; };
 		EC71C56130A4E9550065C4D3 /* SubPilotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC71C56030A4E9550065C4D3 /* SubPilotApp.swift */; };
-		EC71C56330A4E9550065C4D3 /* SubPilotDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC71C56230A4E9550065C4D3 /* SubPilotDocument.swift */; };
 		EC71C56530A4E9550065C4D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC71C56430A4E9550065C4D3 /* ContentView.swift */; };
 		EC71C56730A4E9590065C4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC71C56630A4E9590065C4D3 /* Assets.xcassets */; };
 		EC71C56A30A4E9590065C4D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC71C56930A4E9590065C4D3 /* Preview Assets.xcassets */; };
+		ECD886DE30A4FC2D0086CE6E /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD886DD30A4FC2D0086CE6E /* Subscription.swift */; };
+		ECD886E030A4FCB90086CE6E /* SubscriptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD886DF30A4FCB90086CE6E /* SubscriptionListView.swift */; };
+		ECD886E230A4FCE40086CE6E /* SubscriptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD886E130A4FCE40086CE6E /* SubscriptionRow.swift */; };
+		ECD886E430A4FD060086CE6E /* AddSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD886E330A4FD060086CE6E /* AddSubscriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC32883A30A4FF0B00B26D42 /* SubscriptionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionStore.swift; sourceTree = "<group>"; };
 		EC71C55D30A4E9550065C4D3 /* SubPilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubPilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC71C56030A4E9550065C4D3 /* SubPilotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubPilotApp.swift; sourceTree = "<group>"; };
-		EC71C56230A4E9550065C4D3 /* SubPilotDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubPilotDocument.swift; sourceTree = "<group>"; };
 		EC71C56430A4E9550065C4D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC71C56630A4E9590065C4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC71C56930A4E9590065C4D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC71C56B30A4E9590065C4D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD886DD30A4FC2D0086CE6E /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		ECD886DF30A4FCB90086CE6E /* SubscriptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionListView.swift; sourceTree = "<group>"; };
+		ECD886E130A4FCE40086CE6E /* SubscriptionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRow.swift; sourceTree = "<group>"; };
+		ECD886E330A4FD060086CE6E /* AddSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +62,15 @@
 		EC71C55F30A4E9550065C4D3 /* SubPilot */ = {
 			isa = PBXGroup;
 			children = (
+				ECD886DC30A4FC060086CE6E /* Models */,
 				EC71C56030A4E9550065C4D3 /* SubPilotApp.swift */,
-				EC71C56230A4E9550065C4D3 /* SubPilotDocument.swift */,
 				EC71C56430A4E9550065C4D3 /* ContentView.swift */,
 				EC71C56630A4E9590065C4D3 /* Assets.xcassets */,
 				EC71C56B30A4E9590065C4D3 /* Info.plist */,
 				EC71C56830A4E9590065C4D3 /* Preview Content */,
+				ECD886DF30A4FCB90086CE6E /* SubscriptionListView.swift */,
+				ECD886E130A4FCE40086CE6E /* SubscriptionRow.swift */,
+				ECD886E330A4FD060086CE6E /* AddSubscriptionView.swift */,
 			);
 			path = SubPilot;
 			sourceTree = "<group>";
@@ -70,6 +81,15 @@
 				EC71C56930A4E9590065C4D3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ECD886DC30A4FC060086CE6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECD886DD30A4FC2D0086CE6E /* Subscription.swift */,
+				EC32883A30A4FF0B00B26D42 /* SubscriptionStore.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC71C56330A4E9550065C4D3 /* SubPilotDocument.swift in Sources */,
+				ECD886E030A4FCB90086CE6E /* SubscriptionListView.swift in Sources */,
+				ECD886E430A4FD060086CE6E /* AddSubscriptionView.swift in Sources */,
+				EC32883B30A4FF0B00B26D42 /* SubscriptionStore.swift in Sources */,
 				EC71C56130A4E9550065C4D3 /* SubPilotApp.swift in Sources */,
+				ECD886DE30A4FC2D0086CE6E /* Subscription.swift in Sources */,
 				EC71C56530A4E9550065C4D3 /* ContentView.swift in Sources */,
+				ECD886E230A4FCE40086CE6E /* SubscriptionRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

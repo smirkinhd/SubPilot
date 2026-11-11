@@ -1,22 +1,28 @@
-//
-//  ContentView.swift
-//  SubPilot
-//
-//  Created by Герман Смиркин on 11.11.2026.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    @Binding var document: SubPilotDocument
+    @EnvironmentObject var store: SubscriptionStore
+    @State private var selectedTab = 0
 
     var body: some View {
-        TextEditor(text: $document.text)
+        NavigationStack {
+            TabView(selection: $selectedTab) {
+                SubscriptionListView(
+                    subscriptions: $store.subscriptions,
+                    filter: .all
+                )
+                .tabItem { Label("Все подписки", systemImage: "list.bullet") }
+                .tag(0)
+            }
+            .navigationTitle("SubPilot - дневник подписок")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(document: .constant(SubPilotDocument()))
+        ContentView()
+            .environmentObject(SubscriptionStore())
     }
 }
